@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Freegeoliteip do
+describe FREEGEOLITEIP do
   # TODO: Write tests
 
   it "works" do
