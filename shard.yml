@@ -15,3 +15,5 @@ license: MIT
 dependencies:
   grip:
     github: grip-framework/grip
+  spec-grip:
+    github: grip-framework/spec-grip

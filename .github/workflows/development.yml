@@ -8,26 +8,26 @@ on:
 
 jobs:
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Crystal
-        run: |
-          sudo apt-get update && \
-          sudo apt install libevent-dev libssl-dev libxml2-dev libyaml-dev libgmp-dev libz-dev -y && \
-          wget https://github.com/crystal-lang/crystal/releases/download/0.35.1/crystal_0.35.1-1_amd64.deb -P /tmp && \
-          sudo dpkg -i /tmp/crystal_0.35.1-1_amd64.deb && \
-          crystal --version
-          # sudo snap install crystal --classic
+  # test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Install Crystal
+  #       run: |
+  #         sudo apt-get update && \
+  #         sudo apt install libevent-dev libssl-dev libxml2-dev libyaml-dev libgmp-dev libz-dev -y && \
+  #         wget https://github.com/crystal-lang/crystal/releases/download/0.35.1/crystal_0.35.1-1_amd64.deb -P /tmp && \
+  #         sudo dpkg -i /tmp/crystal_0.35.1-1_amd64.deb && \
+  #         crystal --version
+  #         # sudo snap install crystal --classic
 
-      - uses: actions/checkout@v2
-        name: Check out code
+  #     - uses: actions/checkout@v2
+  #       name: Check out code
 
-      - name: Install dependencies
-        run: shards install
+  #     - name: Install dependencies
+  #       run: shards install
 
-      - name: Run test
-        run: crystal spec
+  #     - name: Run test
+  #       run: crystal spec
 
   build:
     needs: test

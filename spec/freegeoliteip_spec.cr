@@ -1,9 +1,9 @@
 require "./spec_helper"
 
-describe FREEGEOLITEIP do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+describe "FREEGEOLITEIP" do
+  it "renders /" do
+    get "/" do |response|
+      response.body.should eq "Hello, World!"
+    end
   end
 end

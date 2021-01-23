@@ -32,6 +32,10 @@ shards:
     git: https://github.com/luislavena/radix.git
     version: 0.3.9
 
+  spec-grip:
+    git: https://github.com/grip-framework/spec-grip.git
+    version: 1.0.0
+
   swagger:
     git: https://github.com/icyleaf/swagger.git
     version: 0.2.2
