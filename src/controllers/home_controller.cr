@@ -3,6 +3,7 @@ module FREEGEOLITEIP
     class HomeController < Grip::Controllers::Http
       def index(context : Context)
         forwarded = context.request.headers.get("X-Forwarded-For")
+        puts forwarded
         address = forwarded[0].split(",")[0]
 
         context
