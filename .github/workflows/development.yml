@@ -30,6 +30,7 @@ jobs:
         run: crystal spec
 
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -46,6 +47,7 @@ jobs:
           password: ${{ secrets.DO_ACCESS_TOKEN }}
   
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Install doctl
