@@ -1,0 +1,9 @@
+.git
+.dockerignore
+.env
+
+/docs/
+/lib/
+/bin/application
+/.shards/
+*.dwarf
