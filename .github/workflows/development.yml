@@ -8,28 +8,48 @@ on:
 
 jobs:
 
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-      name: Check out code
+      - name: Install Crystal
+        run: |
+          wget https://github.com/crystal-lang/crystal/releases/download/0.35.1/crystal_0.35.1-1_amd64.deb -P /tmp && \
+          sudo dpkg -i /tmp/crystal_0.35.1-1_amd64.deb && \
+          crystal --version
+          # sudo snap install crystal --classic
 
-    - uses: mr-smithers-excellent/docker-build-push@v5
-      name: Build & Push Docker image
-      with:
-        image: arubinofaux/freegeoliteip_services
-        tags: latest
-        registry: registry.digitalocean.com/kusho
-        dockerfile: Dockerfile
-        username: ${{ secrets.DO_ACCESS_TOKEN }}
-        password: ${{ secrets.DO_ACCESS_TOKEN }}
-    
-    - name: Install doctl
-      uses: digitalocean/action-doctl@v2
-      with:
-        token: ${{ secrets.DO_ACCESS_TOKEN }}
+      - uses: actions/checkout@v2
+        name: Check out code
 
-    - name: Create App deployment
-      run: doctl apps create-deployment ${{ secrets.DO_APP_ID }}
+      - name: Install dependencies
+        run: shards install
+
+      - name: Run test
+        run: crystal spec
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        name: Check out code
+
+      - uses: mr-smithers-excellent/docker-build-push@v5
+        name: Build & Push Docker image
+        with:
+          image: arubinofaux/freegeoliteip_services
+          tags: latest
+          registry: registry.digitalocean.com/kusho
+          dockerfile: Dockerfile
+          username: ${{ secrets.DO_ACCESS_TOKEN }}
+          password: ${{ secrets.DO_ACCESS_TOKEN }}
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DO_ACCESS_TOKEN }}
+
+        - name: Create App deployment
+          run: doctl apps create-deployment ${{ secrets.DO_APP_ID }}
