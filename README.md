@@ -4,11 +4,17 @@ TODO: Write a description here
 
 ## Installation
 
-TODO: Write installation instructions here
+```bash
+git clone https://github.com/arubinofaux/freegeoliteip.git
+cd freegeoliteip
+shards install
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+make run
+```
 
 ## Development
 
@@ -16,7 +22,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/freegeoliteip/fork>)
+1. Fork it (<https://github.com/arubinofaux/freegeoliteip/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -24,4 +30,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [arubinofaux](https://github.com/arubinofaux) - creator and maintainer

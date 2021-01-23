@@ -2,12 +2,16 @@ name: freegeoliteip
 version: 0.1.0
 
 authors:
-  - your-name-here <your-email-here>
+  - Dainel Vera <arubinofaux@gmail.com>
 
 targets:
   freegeoliteip:
-    main: src/freegeoliteip.cr
+    main: src/application.cr
 
 crystal: 0.35.1
 
 license: MIT
+
+dependencies:
+  grip:
+    github: grip-framework/grip

@@ -1,2 +1,2 @@
 require "spec"
-require "../src/freegeoliteip"
+require "../src/application"
