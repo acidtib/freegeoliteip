@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Install Crystal
         run: |
+          sudo apt-get update && \
+          sudo apt install libevent-dev libssl-dev libxml2-dev libyaml-dev libgmp-dev libz-dev -y && \
           wget https://github.com/crystal-lang/crystal/releases/download/0.35.1/crystal_0.35.1-1_amd64.deb -P /tmp && \
           sudo dpkg -i /tmp/crystal_0.35.1-1_amd64.deb && \
           crystal --version
