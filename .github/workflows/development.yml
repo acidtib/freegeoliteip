@@ -1,0 +1,35 @@
+name: Development Build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      name: Check out code
+
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & Push Docker image
+      with:
+        image: arubinofaux/freegeoliteip_services
+        tags: latest
+        registry: registry.digitalocean.com/kusho
+        dockerfile: Dockerfile
+        username: ${{ secrets.DO_ACCESS_TOKEN }}
+        password: ${{ secrets.DO_ACCESS_TOKEN }}
+    
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DO_ACCESS_TOKEN }}
+
+    # - name: Create App deployment
+    #   run: doctl apps create-deployment ${{ secrets.DO_APP_ID }}
