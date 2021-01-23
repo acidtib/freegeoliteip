@@ -31,5 +31,5 @@ jobs:
       with:
         token: ${{ secrets.DO_ACCESS_TOKEN }}
 
-    # - name: Create App deployment
-    #   run: doctl apps create-deployment ${{ secrets.DO_APP_ID }}
+    - name: Create App deployment
+      run: doctl apps create-deployment ${{ secrets.DO_APP_ID }}
