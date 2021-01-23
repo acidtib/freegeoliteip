@@ -11,4 +11,4 @@ RUN shards install
 
 ADD . $INSTALL_PATH
 
-RUN crystal build --release --stats --progress ./src/application.cr
+RUN crystal build --release --stats --progress ./src/application.cr -o bin/freegeoliteip
