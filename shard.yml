@@ -1,0 +1,13 @@
+name: freegeoliteip
+version: 0.1.0
+
+authors:
+  - your-name-here <your-email-here>
+
+targets:
+  freegeoliteip:
+    main: src/freegeoliteip.cr
+
+crystal: 0.35.1
+
+license: MIT
