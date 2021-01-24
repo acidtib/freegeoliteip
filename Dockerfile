@@ -13,4 +13,6 @@ ADD . $INSTALL_PATH
 
 RUN crystal build --release --stats --progress --define logs ./src/application.cr -o bin/freegeoliteip
 
+RUN crystal build --release --stats --progress --define logs ./src/jobs.cr -o bin/jobs
+
 CMD "./bin/freegeoliteip"
