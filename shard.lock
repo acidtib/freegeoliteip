@@ -28,6 +28,10 @@ shards:
     git: https://github.com/lucaong/immutable.git
     version: 0.1.24
 
+  ipaddress:
+    git: https://github.com/sija/ipaddress.cr.git
+    version: 0.2.1
+
   jwt:
     git: https://github.com/crystal-community/jwt.git
     version: 1.4.2
