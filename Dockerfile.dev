@@ -8,3 +8,5 @@ WORKDIR $INSTALL_PATH
 ADD shard* $INSTALL_PATH/
 
 RUN shards install
+
+ADD . $INSTALL_PATH
