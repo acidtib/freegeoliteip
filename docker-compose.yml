@@ -16,6 +16,8 @@ services:
       - "8080:80"
     volumes:
       - ./dev/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - web
     networks:
       - freegeoliteip
 
@@ -48,8 +50,21 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - proxy
       - postgresql
       - redis
+    env_file:
+      - .env
+    networks:
+      - freegeoliteip
+
+  jobs:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: crystal run ./src/jobs.cr
+    depends_on:
+      - redis
+    env_file:
+      - .env
     networks:
       - freegeoliteip

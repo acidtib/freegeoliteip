@@ -11,9 +11,29 @@ shards install
 ```
 
 ## Usage
+Prep local enviroment file
+```bash
+cp .env-example .env
+```
+
+Start the services
+```bash
+docker-compose up --build
+```
+
+visit `http://localhost:8080`
+
+## API
+
+Return the geolocation of the visiting computer, the source IP address of the connection.
 
 ```bash
-make run
+curl --request GET --url http://localhost:8080
+```
+
+Return the geolocation of the specified IP address.
+```bash
+curl --request GET --url http://localhost:8080/104.16.181.15
 ```
 
 ## Development

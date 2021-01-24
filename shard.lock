@@ -12,13 +12,33 @@ shards:
     git: https://github.com/grip-framework/exceptions.git
     version: 0.1.0
 
+  geoip2:
+    git: https://github.com/delef/geoip2.cr.git
+    version: 0.5.1
+
   grip:
     git: https://github.com/grip-framework/grip.git
     version: 4.0.4
 
+  habitat:
+    git: https://github.com/luckyframework/habitat.git
+    version: 0.4.4
+
+  immutable:
+    git: https://github.com/lucaong/immutable.git
+    version: 0.1.24
+
   jwt:
     git: https://github.com/crystal-community/jwt.git
     version: 1.4.2
+
+  maxminddb:
+    git: https://github.com/delef/maxminddb.cr.git
+    version: 1.3.4+git.commit.6ed46a18e8631010004692d9e67eb96fe1cbe3a3
+
+  mosquito:
+    git: https://github.com/robacarp/mosquito.git
+    version: 0.9.0
 
   openssl_ext:
     git: https://github.com/stakach/openssl_ext.git
@@ -28,9 +48,17 @@ shards:
     git: https://github.com/grip-framework/pipes.git
     version: 0.1.0
 
+  pool:
+    git: https://github.com/ysbaddaden/pool.git
+    version: 0.2.3
+
   radix:
     git: https://github.com/luislavena/radix.git
     version: 0.3.9
+
+  redis:
+    git: https://github.com/stefanwille/crystal-redis.git
+    version: 2.6.0
 
   spec-grip:
     git: https://github.com/grip-framework/spec-grip.git
