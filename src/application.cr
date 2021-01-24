@@ -12,7 +12,9 @@ module FREEGEOLITEIP
       scope "/" do
         pipe_through :api
 
-        get "/", Controllers::HomeController, as: :index
+        get "/", Controllers::Http::HomeController, as: :index
+
+        get "/:ip", Controllers::Http::IPController, as: :index
       end
 
     end

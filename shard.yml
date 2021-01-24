@@ -19,3 +19,5 @@ dependencies:
     github: grip-framework/spec-grip
   mosquito:
     github: robacarp/mosquito
+  geoip2:
+    github: delef/geoip2.cr
