@@ -5,7 +5,7 @@ module FREEGEOLITEIP
       return context if context.request.resource == "/"
 
       begin
-        source_ip = context.request.resource.gsub("/", "")
+        source_ip = context.request.resource.split("/")[1]
         ip_valid = IPAddress.valid?(source_ip)
 
         raise("Invalid IP address: #{source_ip}") if ip_valid == false
