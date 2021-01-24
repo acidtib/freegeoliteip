@@ -21,3 +21,5 @@ dependencies:
     github: robacarp/mosquito
   geoip2:
     github: delef/geoip2.cr
+  ipaddress:
+    github: sija/ipaddress.cr
