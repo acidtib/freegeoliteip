@@ -6,13 +6,14 @@ module FREEGEOLITEIP
 
     def routes
       pipeline :api, [
-        ValidIPPipe.new
+        ValidIPPipe.new,
+        CorsPipe.new
       ]
-
-      get "/", Controllers::Http::HomeController, as: :index
 
       scope "/" do
         pipe_through :api
+
+        get "/", Controllers::Http::HomeController, as: :index
 
         get "/:ip", Controllers::Http::IPController, as: :index
       end
