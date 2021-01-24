@@ -51,5 +51,19 @@ services:
       - proxy
       - postgresql
       - redis
+    env_file:
+      - .env
+    networks:
+      - freegeoliteip
+
+  jobs:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: crystal run ./src/jobs.cr
+    depends_on:
+      - redis
+    env_file:
+      - .env
     networks:
       - freegeoliteip

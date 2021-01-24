@@ -18,3 +18,6 @@ module FREEGEOLITEIP
     end
   end
 end
+
+app = FREEGEOLITEIP::Application.new()
+app.run
