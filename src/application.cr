@@ -7,7 +7,8 @@ module FREEGEOLITEIP
     def routes
       pipeline :api, [
         ValidIPPipe.new,
-        CorsPipe.new
+        CorsPipe.new,
+        Pipes::PoweredByHeader.new
       ]
 
       scope "/" do
