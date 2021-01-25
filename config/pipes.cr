@@ -27,7 +27,8 @@ module FREEGEOLITEIP
   class CorsPipe < Pipes::Base
     def call(context : HTTP::Server::Context) : HTTP::Server::Context
       context.response.headers["Access-Control-Allow-Origin"] = "*"
-      context.response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS"
+      context.response.headers["Access-Control-Allow-Methods"] = "HEAD, POST, GET, OPTIONS"
+      context.response.headers["Access-Control-Allow-Headers"] = "*"
       context
     end
   end
