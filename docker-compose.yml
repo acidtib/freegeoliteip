@@ -46,14 +46,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: crystal run ./src/application.cr -D logs
+    command: crystal run ./dev/sentry_web.cr
     ports:
       - "5000:5000"
     depends_on:
       # - postgresql
       - redis
     volumes:
-      - ./:/opt/app
+      - .:/opt/app
     env_file:
       - .env
     networks:
@@ -63,7 +63,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: crystal run ./src/jobs.cr
+    command: crystal run ./dev/sentry_jobs.cr
     depends_on:
       - redis
     volumes:

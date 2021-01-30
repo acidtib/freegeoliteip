@@ -23,3 +23,8 @@ dependencies:
     github: delef/geoip2.cr
   ipaddress:
     github: sija/ipaddress.cr
+
+development_dependencies:
+  sentry:
+    github: samueleaton/sentry
+    branch: master

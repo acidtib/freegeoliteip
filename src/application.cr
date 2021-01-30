@@ -2,6 +2,7 @@ require "../config/*"
 
 module FREEGEOLITEIP
   class Application < Grip::Application
+    
     alias Controllers = FREEGEOLITEIP::Controllers
 
     def routes

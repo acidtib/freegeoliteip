@@ -60,6 +60,10 @@ shards:
     git: https://github.com/stefanwille/crystal-redis.git
     version: 2.6.0
 
+  sentry:
+    git: https://github.com/samueleaton/sentry.git
+    version: 0.3.2+git.commit.edcafd89be2658a4bd306ca1096ef9918c727edf
+
   spec-grip:
     git: https://github.com/grip-framework/spec-grip.git
     version: 1.0.0

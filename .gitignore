@@ -1,6 +1,7 @@
 /docs/
 /lib/
 /bin/application
+/bin/jobs
 /.shards/
 *.dwarf
 .env

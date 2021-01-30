@@ -7,5 +7,6 @@ docker-compose.yml
 /docs/
 /lib/
 /bin/application
+/bin/jobs
 /.shards/
 *.dwarf

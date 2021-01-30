@@ -9,4 +9,4 @@ ADD shard* $INSTALL_PATH/
 
 RUN shards install
 
-ADD . $INSTALL_PATH
+COPY . $INSTALL_PATH
