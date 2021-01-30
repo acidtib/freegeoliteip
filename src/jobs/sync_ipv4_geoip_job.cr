@@ -1,20 +1,27 @@
-class SyncIpv4GeoIpJob < Mosquito::PeriodicJob
+class FREEGEOLITEIP::SyncIpv4GeoIpJob < Mosquito::PeriodicJob
   run_every 9000.seconds
   
   def perform
-    pp "hello from mosquito"
-
+    # generate range of all possible ipv4 addresses
     if ENV["APP_ENV"] == "development"
-      range = FREEGEOLITEIP::Helper::IP.create_range("1.255.255.254", "2.0.1.0")
+      ranges = [
+        ["0.0.0.0", "0.0.1.0"],
+        ["0.0.1.1", "0.0.2.0"]
+      ]
     else
-      # generate range of all possible ipv4 addresses
-      range = FREEGEOLITEIP::Helper::IP.create_range("0.0.0.0", "255.255.255.255")  
+      ranges = [
+        ["0.0.0.0", "11.0.0.0"],
+        ["11.0.0.1", "22.0.0.0"],
+        ["22.0.0.1", "33.0.0.0"]
+      ]
     end
 
-    range.each do |i|
-      address = i.address
+    ranges.each do |range|
+      set_range = Helper::IP.create_range(range[0], range[1])
 
-      puts address
+      set_range.each do |i|
+        ReadIpv4Job.new(i.address).perform
+      end
     end
   end
 end

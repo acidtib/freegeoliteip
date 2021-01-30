@@ -6,7 +6,7 @@ docker-compose.yml
 
 /docs/
 /lib/
-/bin/application
+/bin/freegeoliteip
 /bin/jobs
 /.shards/
 *.dwarf

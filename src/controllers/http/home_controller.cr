@@ -9,7 +9,7 @@ module FREEGEOLITEIP
           address = forwarded[0].split(",")[0]
           address = "46.101.2.189" if ENV["APP_ENV"] == "development"
           
-          response = Service::GeoIP::City.new(address)
+          response = GEOCITY.city(address)
 
           context
             .put_status(200)

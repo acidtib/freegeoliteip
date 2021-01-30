@@ -1,4 +1,4 @@
-require "../config/*"
+require "../config/main.cr"
 
 module FREEGEOLITEIP
   class Application < Grip::Application

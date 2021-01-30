@@ -5,7 +5,7 @@ module FREEGEOLITEIP
         def index(context : Context)
           address = context.fetch_path_params.["ip"]
 
-          response = Service::GeoIP::City.new(address)
+          response = GEOCITY.city(address)
 
           context
             .put_status(200)
