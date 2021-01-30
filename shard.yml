@@ -23,6 +23,10 @@ dependencies:
     github: delef/geoip2.cr
   ipaddress:
     github: sija/ipaddress.cr
+  crystar:
+    github: naqvis/crystar
+  maxminddb:
+    github: delef/maxminddb.cr
 
 development_dependencies:
   sentry:

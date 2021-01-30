@@ -4,6 +4,10 @@ shards:
     git: https://github.com/spider-gazelle/bindata.git
     version: 1.8.1
 
+  crystar:
+    git: https://github.com/naqvis/crystar.git
+    version: 0.1.9
+
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
