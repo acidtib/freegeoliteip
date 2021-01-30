@@ -1,4 +1,4 @@
-FROM crystallang/crystal:0.35.1
+FROM crystallang/crystal:0.36.0-alpine
 
 ENV INSTALL_PATH /opt/app
 RUN mkdir -p $INSTALL_PATH

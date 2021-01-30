@@ -1,0 +1,70 @@
+version: 2.0
+shards:
+  bindata:
+    git: https://github.com/spider-gazelle/bindata.git
+    version: 1.8.1
+
+  exception_page:
+    git: https://github.com/crystal-loot/exception_page.git
+    version: 0.1.4
+
+  exceptions:
+    git: https://github.com/grip-framework/exceptions.git
+    version: 0.1.0
+
+  geoip2:
+    git: https://github.com/delef/geoip2.cr.git
+    version: 0.5.2
+
+  grip:
+    git: https://github.com/grip-framework/grip.git
+    version: 4.0.4
+
+  habitat:
+    git: https://github.com/luckyframework/habitat.git
+    version: 0.4.4
+
+  ipaddress:
+    git: https://github.com/sija/ipaddress.cr.git
+    version: 0.2.1
+
+  jwt:
+    git: https://github.com/crystal-community/jwt.git
+    version: 1.5.0
+
+  maxminddb:
+    git: https://github.com/delef/maxminddb.cr.git
+    version: 1.4.1+git.commit.948533b8cd281db3397ad5aa05cdf53795de947c
+
+  mosquito:
+    git: https://github.com/robacarp/mosquito.git
+    version: 0.9.0
+
+  openssl_ext:
+    git: https://github.com/spider-gazelle/openssl_ext.git
+    version: 2.1.0
+
+  pipes:
+    git: https://github.com/grip-framework/pipes.git
+    version: 0.1.0
+
+  pool:
+    git: https://github.com/ysbaddaden/pool.git
+    version: 0.2.3
+
+  radix:
+    git: https://github.com/luislavena/radix.git
+    version: 0.3.9
+
+  redis:
+    git: https://github.com/stefanwille/crystal-redis.git
+    version: 2.6.0
+
+  spec-grip:
+    git: https://github.com/grip-framework/spec-grip.git
+    version: 1.0.0
+
+  swagger:
+    git: https://github.com/icyleaf/swagger.git
+    version: 0.2.2
+

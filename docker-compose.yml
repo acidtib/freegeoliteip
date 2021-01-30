@@ -52,6 +52,8 @@ services:
     depends_on:
       # - postgresql
       - redis
+    volumes:
+      - ./:/opt/app
     env_file:
       - .env
     networks:
@@ -64,6 +66,8 @@ services:
     command: crystal run ./src/jobs.cr
     depends_on:
       - redis
+    volumes:
+      - ./:/opt/app
     env_file:
       - .env
     networks:
