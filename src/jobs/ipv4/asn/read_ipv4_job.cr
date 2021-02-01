@@ -1,4 +1,4 @@
-class FREEGEOLITEIP::ReadIpv4AsnJob < Mosquito::QueuedJob
+class FREEGEOLITEIP::Jobs::Asn::ReadIpv4Job < Mosquito::QueuedJob
   params(raw : MaxMindDB::Any, ip : String)
 
   def perform
