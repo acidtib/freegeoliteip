@@ -1,6 +1,8 @@
 # freegeoliteip
 
-TODO: Write a description here
+Trying to recreate the good old days of [freegeoip](https://github.com/fiorix/freegeoip) 
+
+by the way, this project is still a work in progress
 
 ## Installation
 
