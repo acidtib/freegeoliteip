@@ -4,5 +4,6 @@ class FREEGEOLITEIP::Jobs::CheckGeoipDbJob < Mosquito::PeriodicJob
   def perform
     # check for updated database
     
+    Jobs::SyncIpv4GeoIpAsnJob.new().perform
   end
 end

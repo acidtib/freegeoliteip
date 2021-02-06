@@ -1,5 +1,4 @@
-class FREEGEOLITEIP::Jobs::SyncIpv4GeoIpAsnJob < Mosquito::PeriodicJob
-  run_every 7200.minutes
+class FREEGEOLITEIP::Jobs::SyncIpv4GeoIpAsnJob < Mosquito::QueuedJob
   
   def perform
     db_data = IO::Memory.new
