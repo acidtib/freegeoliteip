@@ -5,7 +5,9 @@ module FREEGEOLITEIP
         def index(context : Context)
           address = context.fetch_path_params.["ip"]
 
-          response = GEOCITY.city(address)
+          # response = GEOCITY.city(address)
+
+          response = {jsjsL: "sss"}
 
           context
             .put_status(200)
@@ -15,7 +17,8 @@ module FREEGEOLITEIP
         def country(context : Context)
           address = context.fetch_path_params.["ip"]
           
-          response = Service::GeoIP::Country.new(address)
+          # response = Service::GeoIP::Country.new(address)
+          response = {jsjsL: "sss"}
 
           context
             .put_status(200)
@@ -25,7 +28,8 @@ module FREEGEOLITEIP
         def asn(context : Context)
           address = context.fetch_path_params.["ip"]
           
-          response = Service::GeoIP::Asn.new(address)
+          # response = Service::GeoIP::Asn.new(address)
+          response = {jsjsL: "sss"}
 
           context
             .put_status(200)

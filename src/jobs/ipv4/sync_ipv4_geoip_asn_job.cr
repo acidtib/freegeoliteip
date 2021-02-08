@@ -40,7 +40,7 @@ class FREEGEOLITEIP::Jobs::SyncIpv4GeoIpAsnJob < Mosquito::QueuedJob
     ranges.each do |r|
       begin
         raw_data = asn_data.get(r.address)
-        Jobs::Asn::ReadIpv4Job.new(raw_data, r.address).perform
+        Jobs::Asns::ReadIpv4Job.new(raw_data, r.address).perform
       rescue exception
         pp exception
       end

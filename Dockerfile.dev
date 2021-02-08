@@ -1,4 +1,6 @@
-FROM crystallang/crystal:0.36.0-alpine
+FROM crystallang/crystal:0.36.1-alpine
+
+RUN apk --update add postgresql-client
 
 ENV INSTALL_PATH /opt/app
 RUN mkdir -p $INSTALL_PATH
