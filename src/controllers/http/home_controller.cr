@@ -4,12 +4,11 @@ module FREEGEOLITEIP
       class HomeController < Grip::Controllers::Http
         def index(context : Context)
           forwarded = context.request.headers.get("X-Forwarded-For")
-          puts forwarded
           
-          address = forwarded[0].split(",")[0]
-          address = "46.101.2.189" if ENV["APP_ENV"] == "development"
+          ip_address = forwarded[0].split(",")[0]
+          ip_address = "1.0.0.5" if ENV["APP_ENV"] == "development"
           
-          response = GEOCITY.city(address)
+          response = Views::Base.result(ip_address)
 
           context
             .put_status(200)

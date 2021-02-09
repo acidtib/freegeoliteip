@@ -4,6 +4,14 @@ shards:
     git: https://github.com/spider-gazelle/bindata.git
     version: 1.8.1
 
+  crystar:
+    git: https://github.com/naqvis/crystar.git
+    version: 0.1.9
+
+  db:
+    git: https://github.com/crystal-lang/crystal-db.git
+    version: 0.10.0
+
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git
     version: 0.1.4
@@ -11,10 +19,6 @@ shards:
   exceptions:
     git: https://github.com/grip-framework/exceptions.git
     version: 0.1.0
-
-  geoip2:
-    git: https://github.com/delef/geoip2.cr.git
-    version: 0.5.2
 
   grip:
     git: https://github.com/grip-framework/grip.git
@@ -24,9 +28,25 @@ shards:
     git: https://github.com/luckyframework/habitat.git
     version: 0.4.4
 
+  i18n:
+    git: https://github.com/TechMagister/i18n.cr.git
+    version: 0.3.1
+
+  ifrit:
+    git: https://github.com/imdrasil/ifrit.git
+    version: 0.1.2
+
+  inflector:
+    git: https://github.com/phoffer/inflector.cr.git
+    version: 0.1.8
+
   ipaddress:
     git: https://github.com/sija/ipaddress.cr.git
     version: 0.2.1
+
+  jennifer:
+    git: https://github.com/imdrasil/jennifer.cr.git
+    version: 0.10.0+git.commit.e55ca7700bb36878eed5e127c99d5401fe1bf388
 
   jwt:
     git: https://github.com/crystal-community/jwt.git
@@ -34,7 +54,7 @@ shards:
 
   maxminddb:
     git: https://github.com/delef/maxminddb.cr.git
-    version: 1.4.1+git.commit.948533b8cd281db3397ad5aa05cdf53795de947c
+    version: 1.4.1
 
   mosquito:
     git: https://github.com/robacarp/mosquito.git
@@ -44,9 +64,13 @@ shards:
     git: https://github.com/spider-gazelle/openssl_ext.git
     version: 2.1.0
 
+  pg:
+    git: https://github.com/will/crystal-pg.git
+    version: 0.23.1
+
   pipes:
     git: https://github.com/grip-framework/pipes.git
-    version: 0.1.0
+    version: 0.1.1
 
   pool:
     git: https://github.com/ysbaddaden/pool.git
@@ -54,11 +78,15 @@ shards:
 
   radix:
     git: https://github.com/luislavena/radix.git
-    version: 0.3.9
+    version: 0.4.0
 
   redis:
     git: https://github.com/stefanwille/crystal-redis.git
     version: 2.6.0
+
+  sam:
+    git: https://github.com/imdrasil/sam.cr.git
+    version: 0.4.0
 
   sentry:
     git: https://github.com/samueleaton/sentry.git

@@ -19,12 +19,22 @@ dependencies:
     github: grip-framework/spec-grip
   mosquito:
     github: robacarp/mosquito
-  geoip2:
-    github: delef/geoip2.cr
   ipaddress:
     github: sija/ipaddress.cr
+  crystar:
+    github: naqvis/crystar
+  maxminddb:
+    github: delef/maxminddb.cr
+  jennifer:
+    github: imdrasil/jennifer.cr
+    branch: master
+  pg:
+    github: will/crystal-pg
 
 development_dependencies:
   sentry:
     github: samueleaton/sentry
     branch: master
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.4.0
