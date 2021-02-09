@@ -97,6 +97,31 @@ module FREEGEOLITEIP
 
         return response
       end
+
+      def self.asn(ip)
+        response = RES
+
+        response["ip"] = ip
+
+        begin
+          get_ip = Ip.where { _address == ip }.includes(:asn).first!
+
+          response["type"] = get_ip.address_type
+
+          response["asn"] = {
+            number: get_ip.asn!.system_number,
+            organization: get_ip.asn!.system_organization
+          }
+        rescue exception
+          response["type"] = ""
+          response["asn"] = {
+            number: nil,
+            organization: nil
+          }
+        end
+
+        return response
+      end
     end
   end
 end
