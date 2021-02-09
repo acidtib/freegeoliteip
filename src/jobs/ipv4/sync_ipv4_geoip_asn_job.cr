@@ -30,9 +30,9 @@ class FREEGEOLITEIP::Jobs::SyncIpv4GeoIpAsnJob < Mosquito::QueuedJob
 
     # generate range of all possible ipv4 addresses
     if ENV["APP_ENV"] == "development"
-      set_range = ["1.0.0.0", "1.1.60.188"]
+      set_range = ["1.0.0.0", "1.0.0.5"]
     else
-      set_range = ["1.0.0.0", "1.0.0.10"]
+      set_range = ["1.0.0.0", "255.255.255.255"]
     end
 
     ranges = Helper::IP.create_range(set_range[0], set_range[1])

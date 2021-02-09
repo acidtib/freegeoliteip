@@ -128,6 +128,43 @@ ALTER SEQUENCE public.migration_versions_id_seq OWNED BY public.migration_versio
 
 
 --
+-- Name: syncs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.syncs (
+    id integer NOT NULL,
+    date character varying(254) NOT NULL,
+    file_name character varying(254) NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.syncs OWNER TO postgres;
+
+--
+-- Name: syncs_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.syncs_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.syncs_id_seq OWNER TO postgres;
+
+--
+-- Name: syncs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.syncs_id_seq OWNED BY public.syncs.id;
+
+
+--
 -- Name: asns id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -146,6 +183,13 @@ ALTER TABLE ONLY public.ips ALTER COLUMN id SET DEFAULT nextval('public.ips_id_s
 --
 
 ALTER TABLE ONLY public.migration_versions ALTER COLUMN id SET DEFAULT nextval('public.migration_versions_id_seq'::regclass);
+
+
+--
+-- Name: syncs id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.syncs ALTER COLUMN id SET DEFAULT nextval('public.syncs_id_seq'::regclass);
 
 
 --
@@ -170,6 +214,14 @@ ALTER TABLE ONLY public.ips
 
 ALTER TABLE ONLY public.migration_versions
     ADD CONSTRAINT migration_versions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: syncs syncs_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.syncs
+    ADD CONSTRAINT syncs_pkey PRIMARY KEY (id);
 
 
 --
