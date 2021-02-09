@@ -3,11 +3,9 @@ module FREEGEOLITEIP
     module Http
       class IPController < Grip::Controllers::Http
         def index(context : Context)
-          address = context.fetch_path_params.["ip"]
+          ip_address = context.fetch_path_params.["ip"]
 
-          # response = GEOCITY.city(address)
-
-          response = {jsjsL: "sss"}
+          response = Views::Base.result(ip_address)
 
           context
             .put_status(200)
